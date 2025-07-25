@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Happy Birthday Carol 🎉</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -12,7 +13,7 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-family: 'Comic Neue', 'Marker Felt', 'Comic Sans MS', cursive, sans-serif;
       background: linear-gradient(135deg, #ff4d4d, #ffd700, #00ff95, #9b59b6, #ff69b4);
       background-size: 500% 500%;
       animation: vibrantGradient 8s ease infinite;
@@ -57,6 +58,20 @@
       animation: sparkleFloat 5s infinite linear;
       pointer-events: none;
       z-index: 0;
+    }
+
+    @keyframes sparkleFloat {
+      0% {
+        opacity: 0;
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        opacity: 0.7;
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-100px) rotate(360deg);
+      }
     }
 
     /* Floating hearts */
@@ -356,16 +371,6 @@
       100% { text-shadow: 0 0 30px rgba(231, 76, 60, 0.9); }
     }
 
-    .confetti {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      pointer-events: none;
-      z-index: 999;
-    }
-
     .music-btn {
       position: fixed;
       top: 20px;
@@ -415,37 +420,19 @@
       75% { transform: rotate(4deg); }
     }
 
-    .sparkle {
-      position: absolute;
-      color: var(--color, #ffffff);
-      font-size: 1.8rem;
-      animation: sparkleFloat 4s infinite linear;
-      pointer-events: none;
-    }
-
-    @keyframes sparkleFloat {
-      0% {
-        opacity: 0;
-        transform: translateY(0) rotate(0deg);
-      }
-      50% {
-        opacity: 0.7;
-      }
-      100% {
-        opacity: 0;
-        transform: translateY(-100px) rotate(360deg);
-      }
-    }
-
     @media (max-width: 768px) {
       h1 { 
-        font-size: 2.5rem; 
+        font-size: 2.2rem; 
         margin: 40px 10px 20px 10px;
+        padding: 15px 25px;
+      }
+      p { 
+        font-size: 1.2rem; 
         padding: 15px 25px;
       }
       .btn { 
         padding: 15px 30px; 
-        font-size: 1.2rem; 
+        font-size: 1rem; 
         margin: 20px;
       }
       .features-grid { 
@@ -456,6 +443,9 @@
         padding: 20px; 
         margin: 10px 0;
       }
+      .feature-card ul {
+        font-size: 1rem;
+      }
       .birthday-cake {
         font-size: 3.5rem;
       }
@@ -464,7 +454,10 @@
         height: 53px;
       }
       .surprise-section h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+      }
+      footer {
+        font-size: 1rem;
       }
     }
   </style>
@@ -481,7 +474,7 @@
 
   <div class="birthday-cake">🎂</div>
 
-  <p>From your forever bestie <strong>Miiro Jaliru</strong> 💖</p>
+  <p>From your OB & forever bestie <strong>Miiro Jaliru</strong> 💖</p>
   <p>Okay okay 😅... I forgot on 21st July. BUT!</p>
   <p><strong>This</strong> is not just a birthday wish... It's a magical website just for YOU, built with love, guilt 😂, and memories of our school days 🏫❤️</p>
 
@@ -495,36 +488,35 @@
         <li>😂 Your jokes are legendary... even the nonsense ones 😜</li>
         <li>🌸 You've got that heart that hugs without even touching</li>
         <li>🌈 You've never changed since our school days. Still real. Still rare.</li>
-        <li>😌 You forgive slow besties who forget birthdays but never forget YOU 🥲</li>
+        <li>😌 You forgive slow OBs who forget birthdays but never forget YOU 🥲</li>
       </ul>
     </div>
 
     <div class="feature-card">
       <h2 style="margin-top: 0; color: #9b59b6;">💖 Our School Memories</h2>
       <p>Remember when we were just kids in school? 🏫 Those were the days when friendship was simple and pure. You've carried that same beautiful energy with you all these years!</p>
-      <p>From silly jokes to deep conversations, you've always been the friend who makes everything better! ✨</p>
+      <p>From silly jokes to deep conversations, you've always been the OG who makes everything better! ✨</p>
     </div>
 
     <div class="feature-card">
       <h2 style="margin-top: 0; color: #3498db;">🎊 Birthday Wishes</h2>
       <p>May this new year bring you endless joy, laughter, and all the happiness you deserve! 🌈</p>
-      <p>May your dreams come true and may every day be as special as you are! 🌟</p>
-      <p>Here's to another year of amazing friendship! 🎉</p>
+      <p>May your dreams come true and may every day be as special as you are, my OG! 🌟</p>
+      <p>Here's to another year of our epic OB-OG friendship! 🎉</p>
     </div>
   </div>
 
   <div class="surprise-section" id="surprise">
     <h2 class="glow">🎁 SURPRISE CAROL! 🎁</h2>
-    <p style="font-size: 1.4rem;">You're not just a friend, you're my true friend, a soul sister I’ll always cherish!</p>
+    <p style="font-size: 1.4rem;">You're my OG, my soul sister, and forever bestie I’ll always cherish!</p>
     <p style="font-size: 1.3rem;">I built this because you deserve digital flowers 💐 and virtual hugs 💞</p>
-    <p style="font-size: 1.3rem;">Let's just agree… this counts as a <em>late birthday + forever friendship</em> celebration! 🎊</p>
+    <p style="font-size: 1.3rem;">Let's just agree… this counts as a <em>late birthday + forever OB-OG</em> celebration! 🎊</p>
     <div class="birthday-cake">🎂</div>
-    <p style="font-size: 1.6rem; font-weight: bold; color: #e74c3c;">HAPPY BIRTHDAY ONCE AGAIN 🎂🎈, WITH LOVE FROM MIIROOO 💜</p>
-    <canvas class="confetti" id="confetti"></canvas>
+    <p style="font-size: 1.6rem; font-weight: bold; color: #e74c3c;">HAPPY BIRTHDAY ONCE AGAIN 🎂🎈 — WITH LOVE FROM YOUR OB, MIROOO 💜</p>
   </div>
 
   <footer>
-    Website handmade with 💖 by Miiro Jaliru, your forever OB & bestie! 😎✨
+    Website handmade with 💖 by Miiro Jaliru — your OB & forever bestie! 😎✨
   </footer>
 
   <!-- Replace with a real Happy Birthday song -->
@@ -535,7 +527,7 @@
   </audio>
 
   <script>
-    // Define distinct colors for balloons, hearts, confetti, and sparkles
+    // Define distinct colors for balloons and hearts
     const colors = [
       '#0000ff', // Blue
       '#ff69b4', // Pink
@@ -615,8 +607,6 @@
     // Show surprise function
     function showSurprise() {
       document.getElementById('surprise').style.display = 'block';
-      startConfetti();
-      createSparkles();
       
       // Scroll to surprise section smoothly
       setTimeout(() => {
@@ -646,88 +636,6 @@
         btn.innerHTML = '🔇';
         btn.classList.add('playing');
         musicPlaying = true;
-      }
-    }
-
-    // Confetti effect
-    const canvas = document.getElementById('confetti');
-    const ctx = canvas.getContext('2d');
-    
-    function resizeCanvas() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
-    
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    const confettiPieces = Array.from({ length: 300 }).map(() => ({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height - canvas.height,
-      r: Math.random() * 8 + 4,
-      d: Math.random() * 50 + 10,
-      color: colors[Math.floor(Math.random() * colors.length)],
-      tilt: Math.random() * 10 - 5,
-      tiltAngle: 0,
-      speed: Math.random() * 4 + 2,
-      isCircle: Math.random() > 0.5
-    }));
-
-    function drawConfetti() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      confettiPieces.forEach(p => {
-        ctx.beginPath();
-        ctx.lineWidth = p.r / 2;
-        ctx.strokeStyle = p.color;
-        ctx.fillStyle = p.color;
-        
-        ctx.save();
-        ctx.translate(p.x + p.tilt, p.y);
-        ctx.rotate(p.tiltAngle);
-        if (p.isCircle) {
-          ctx.arc(0, 0, p.r / 2, 0, Math.PI * 2);
-          ctx.fill();
-        } else {
-          ctx.fillRect(-p.r/2, -p.d/2, p.r, p.d);
-        }
-        ctx.restore();
-      });
-      moveConfetti();
-    }
-
-    function moveConfetti() {
-      confettiPieces.forEach(p => {
-        p.y += Math.cos(p.d) + p.speed;
-        p.tiltAngle += 0.1;
-        p.tilt = Math.sin(p.tiltAngle) * 15;
-        if (p.y > canvas.height) {
-          p.y = -10;
-          p.x = Math.random() * canvas.width;
-        }
-      });
-    }
-
-    function startConfetti() {
-      setInterval(drawConfetti, 16);
-    }
-
-    // Sparkles effect
-    function createSparkles() {
-      for (let i = 0; i < 25; i++) {
-        setTimeout(() => {
-          const sparkle = document.createElement('div');
-          sparkle.className = 'sparkle';
-          sparkle.innerHTML = '✨';
-          sparkle.style.left = Math.random() * 100 + '%';
-          sparkle.style.top = Math.random() * 100 + '%';
-          const color = colors[Math.floor(Math.random() * colors.length)];
-          sparkle.style.setProperty('--color', color);
-          document.body.appendChild(sparkle);
-          
-          setTimeout(() => {
-            sparkle.remove();
-          }, 4000);
-        }, i * 80);
       }
     }
 
